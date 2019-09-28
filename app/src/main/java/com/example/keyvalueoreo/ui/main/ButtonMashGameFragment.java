@@ -57,14 +57,18 @@ public class ButtonMashGameFragment extends Fragment {
         Button button = root.findViewById(R.id.button_mash_button);
         Context context = getActivity();
         SharedPreferences sharedPreferences = context.getSharedPreferences(getString(R.string.shared_preferences_key), Context.MODE_PRIVATE);
-        int highScoreValue = sharedPreferences.getInt(getString(R.string.button_mash_high_score_key), 0);
+        SharedPreferences.Editor sharedPrefEditor = sharedPreferences.edit();
+        int defaultValue = getResources().getInteger(R.integer.default_value);
+        int highScoreValue = sharedPreferences.getInt(getString(R.string.button_mash_high_score_key), defaultValue);
         highScoreTextView = root.findViewById(R.id.button_mash_high_score);
         timerTextView = root.findViewById(R.id.button_mash_timer);
         currentScoreTextView = root.findViewById(R.id.button_mash_current_score);
 
         highScoreTextView.setText(getString(R.string.button_mash_high_score_text_view)+" "+Integer.toString(highScoreValue));
         timerTextView.setText(getString(R.string.timer_text_view_default)+" "+Integer.toString(timeLeft));
-        currentScoreTextView.setText(getString(R.string.button_mash_current_score_text_view)+" "+Integer.toString(0));
+        currentScoreTextView.setText(getString(R.string.button_mash_current_score_text_view)+" "+Integer.toString(defaultValue));
+
+        sharedPrefEditor.putInt(getString(R.string.button_mash_current_score_key), defaultValue);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
