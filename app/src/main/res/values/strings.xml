@@ -1,0 +1,15 @@
+<resources>
+    <string name="tab_text_1">Phase 1</string>
+    <string name="tab_text_2">Phase 2</string>
+    <string name="app_name">Shared Preferences Learning Application</string>
+    <string name="click_me_button_text">Click Me!</string>
+    <string name="shared_preferences_key">com.example.keyvalueoreo.PREFERENCE_FILE_KEY</string>
+    <string name="number_of_button_clicks_key">com.example.keyvalueoreo.NUM_BUTTON_CLICKS</string>
+    <string name="button_mash_high_score_key">com.example.keyvalueoreo.HIGH_SCORE</string>
+    <string name="button_mash_current_score_key">com.example.keyvalueoreo.CURRENT_SCORE</string>
+    <string name="num_button_clicks_text_view"><![CDATA[Clicks: ]]></string>
+    <string name="button_mash_button_text">Press As Fast As You Can!!!</string>
+    <string name="button_mash_high_score_text_view"><![CDATA[High Score: ]]></string>
+    <string name="button_mash_current_score_text_view"><![CDATA[Current Score: ]]></string>
+    <string name="timer_text_view_default"><![CDATA["Time Left: "]]></string>
+</resources>
